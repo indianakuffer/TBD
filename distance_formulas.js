@@ -48,7 +48,7 @@ function getSideSAS(s1, a, s2) {
 export function distanceToISS(lon1, lat1, lon2, lat2) {
   // distances in meters
   const earthRadius = 6371000
-  const ISSHeight = 408000
+  const issHeight = 408000
 
   // convert coordinates from spherical to cartesian
   const cartesian1 = coordToXYZ(lon1, lat1, earthRadius)
@@ -62,5 +62,5 @@ export function distanceToISS(lon1, lat1, lon2, lat2) {
   const outsideAngle = 180 - insideAngle
 
   // use angle to calculate distance!
-  return getSideSAS(coordDistance, outsideAngle, ISSHeight)
+  return getSideSAS(coordDistance, outsideAngle, issHeight)
 }
