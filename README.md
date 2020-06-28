@@ -210,6 +210,7 @@ useEffect(() => {
 - Set the height of the page in relation to the user's distance to ISS.
 - Populate space with facts, images, etc from a custom data set.
 - Distance counter while scrolling.
+- Mobile styling.
 
 ## Wireframes
 - [Wireframes on wireframe.cc](https://wireframe.cc/pro/pp/e6d393782354279)
@@ -237,6 +238,17 @@ useEffect(() => {
 ## MVP Timeframes
 How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
+| Task | Expected Hours | Logged Hours |
+| -- | -- | -- |
+|App Setup|0.5|-|
+|API Hookup|1|-|
+|Build Components & Component Logic|7|-|
+|Function to Calc Distance|3|3|
+|Scrolling Logic|4|-|
+|Information Reasearch / Writing|7|-|
+|Styling|4|-|
+|Total|26.5|-|
+
 ## Post-MVP
 - Distance tracker
 - Background dynamically changes with scroll, parallax
@@ -245,7 +257,24 @@ How long you anticipate spending on each area of development. Be sure to conside
 - Audio
 - Imperial measurement option
 - Restart loop
-- 'Complex' scrollbar, number and line moves up screen according to scroll percentage
+- 'Complex' scrollbar, number and line moves up screen in relation to scroll percentage
 
 ## SWOT Analysis
 Heading into project week and with all your planning in mind, consider your Strengths, Weaknesses, Opportunities, and Threats as they relate to your final project. How will you overcome your weaknesses and threats?
+
+- Strengths
+  - Confident in React
+  - Tight MVP
+  - Ample time to reach MVP, or work on Post-MVP features
+  - APIs seem stable and trustworthy
+  - Site aligns with personal interests
+- Weaknesses
+  - No experience with scroll-based sites, might be finicky to work with
+  - Possibly over-ambitious
+  - Using styled-components for the first time
+- Opportunites
+  - Using styled-components for the first time
+  - Great showcase for React, React Router, styled-components, and general ability
+  - Visual-focused design looks good
+- Threats
+  - Commonly used API seen as uninspired
