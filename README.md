@@ -6,6 +6,20 @@ Zenith is a web experience that calculates the user's distance from the Internat
 Zenith's MVP will make use of two APIs: [Open Notify's ISS Tracker](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to retrieve the current location of the ISS and [Open Cage Data's Geocoding API](https://opencagedata.com/api) to retrieve longitude and latitude coordinates based on the user's submitted location. Snippets below:
 
 ### Open Notify ISS Location
+
+```JS
+useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('http://api.open-notify.org/iss-now')
+      console.log(response)
+    }
+    fetchData()
+  }, [])
+```
+
+<details> <summary>JSON snippet</summary>
+<p>
+
 ```JSON
 {
     "message": "success",
@@ -17,7 +31,25 @@ Zenith's MVP will make use of two APIs: [Open Notify's ISS Tracker](http://open-
 }
 ```
 
+</p>
+</details>
+
 ### Open Cage Data Geocoding
+
+```JS
+useEffect(() => {
+    const fetchData = async () => {
+      const apiKey = process.env.REACT_APP_OCG_API_KEY
+      const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${'20 W 34th St New York, NY 10001'}`)
+      console.log(response)
+    }
+    fetchData()
+  }, [])
+  ```
+
+<details> <summary>JSON snippet</summary>
+<p>
+
 ```JSON
 {
     "documentation": "https://opencagedata.com/api",
@@ -167,25 +199,53 @@ Zenith's MVP will make use of two APIs: [Open Notify's ISS Tracker](http://open-
 }
 ```
 
+</p>
+</details>
+
 ## MVP
 - Form accepting and saving user's location to state.
 - API call to Open Cage Data returning user's longitude and latitude, saving to state.
 - API call to Open Notify to retrieve ISS longitude and latitude.
-- Function converting spherical coordinates to cartesian coordinates, then caculating the distance between the two, then between coord1 and ISS.
-- Set the height of the page in relation to the user's distance to ISS
-- Populate space with facts, images, etc from a custom data set
+- Function calculating user's distance to ISS.
+- Set the height of the page in relation to the user's distance to ISS.
+- Populate space with facts, images, etc from a custom data set.
+- Distance counter while scrolling.
 
 ## Wireframes
-Mockups of your app on desktop, tablet, and mobile.
+- [Wireframes on wireframe.cc](https://wireframe.cc/pro/pp/e6d393782354279)
+- [Wireframe album on imgur](https://imgur.com/a/wEXlDxo)
 
 ## MVP Component Heirarchy
-A visual tree of your components, depicting the parent/child relationships, as well as an indication of which will be class components, requiring state, and which will be functional components, taking props.
+
+- App (state)
+  - Nav (state)
+    - Links
+    - Footer
+  - Main
+    - Home (state)
+      - Title
+      - Searchbar (state)
+      - Prompt
+      - Scrollbar
+        - Distance
+      - Fact
+      - End
+    - About
+      - Title
+
 
 ## MVP Timeframes
 How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
 ## Post-MVP
-Write out what your goals are for post-MVP, including nice-to-have features that you would like to implement once your MVP is complete. (Need some ideas? Check out the Resources section below.)
+- Distance tracker
+- Background dynamically changes with scroll, parallax
+- Styled components
+- Custom art
+- Audio
+- Imperial measurement option
+- Restart loop
+- 'Complex' scrollbar, number and line moves up screen according to scroll percentage
 
 ## SWOT Analysis
 Heading into project week and with all your planning in mind, consider your Strengths, Weaknesses, Opportunities, and Threats as they relate to your final project. How will you overcome your weaknesses and threats?
