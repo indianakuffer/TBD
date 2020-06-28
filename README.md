@@ -17,7 +17,7 @@ useEffect(() => {
   }, [])
 ```
 
-<details> <summary>JSON snippet</summary>
+<details> <summary>Show JSON snippet</summary>
 <p>
 
 ```JSON
@@ -47,7 +47,7 @@ useEffect(() => {
   }, [])
   ```
 
-<details> <summary>JSON snippet</summary>
+<details> <summary>Show JSON snippet</summary>
 <p>
 
 ```JSON
@@ -246,8 +246,8 @@ How long you anticipate spending on each area of development. Be sure to conside
 |Function to Calc Distance|3|3|
 |Scrolling Logic|4|-|
 |Information Reasearch / Writing|7|-|
-|Styling|4|-|
-|Total|26.5|-|
+|Styling (Mobile Friendly)|7|-|
+|Total|29.5|-|
 
 ## Post-MVP
 - Distance tracker
@@ -277,4 +277,17 @@ Heading into project week and with all your planning in mind, consider your Stre
   - Great showcase for React, React Router, styled-components, and general ability
   - Visual-focused design looks good
 - Threats
-  - Commonly used API seen as uninspired
+  - Commonly used API potentially seen as uninspired
+
+## Code Snippet
+
+> *description*
+
+<details><summary>Show snippet</summary>
+<p>
+
+```JS
+//TBD
+```
+</p>
+</details>
