@@ -9,6 +9,26 @@
   },
   {
     "fact": "Fact 3",
+    "distance": 300
+  },
+  {
+    "fact": "Fact 4",
+    "distance": 400
+  },
+  {
+    "fact": "Fact 5",
+    "distance": 500
+  },
+  {
+    "fact": "Fact 6",
+    "distance": 600
+  },
+  {
+    "fact": "Fact 7",
+    "distance": 700
+  },
+  {
+    "fact": "Fact 3",
     "distance": 20000000
   }
 ]

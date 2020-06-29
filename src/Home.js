@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Prompt from './Prompt'
 import FactList from './FactList'
@@ -9,18 +9,27 @@ const HomeContainer = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  transition: 1s height ease;
 `
 const Landing = styled.div`
   display: flex;
   flex-flow: column;
+  padding-top: 20vh;
   align-items: center;
   height: 100vh;
 `
 //--------------------------------------//
 
+const scrollToRef = (ref) => {
+  window.scrollTo(0, ref.current.offsetTop)
+}
+
 export default function Home(props) {
   let [inputValue, setInputValue] = useState('')
+  const myRef = useRef()
+
+  const scrollToLanding = () => {
+    scrollToRef(myRef)
+  }
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value)
@@ -32,10 +41,12 @@ export default function Home(props) {
     setInputValue('')
   }
 
+  useEffect(scrollToLanding, [props.distance])
+
   return (
-    < HomeContainer >
+    <HomeContainer >
       {props.distance && <FactList distance={props.distance} facts={props.facts}></FactList>}
-      <Landing >
+      <Landing ref={myRef}>
         <h1>Zenith</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="location"></label>

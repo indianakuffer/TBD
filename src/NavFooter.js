@@ -4,7 +4,6 @@ import styled from 'styled-components'
 //----------- Styling ------------------//
 const StyledFooter = styled.footer`
 `
-
 //--------------------------------------//
 
 export default function NavFooter() {
