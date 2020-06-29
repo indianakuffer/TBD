@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Prompt from './Prompt'
+import FactList from './FactList'
 
 //----------- Styling ------------------//
 const HomeContainer = styled.div`
@@ -8,7 +9,11 @@ const HomeContainer = styled.div`
   flex-flow: column;
   align-items: center;
 `
-
+const Landing = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`
 //--------------------------------------//
 
 export default function Home(props) {
@@ -25,18 +30,22 @@ export default function Home(props) {
   }
 
   return (
-    <HomeContainer>
-      <h1>Zenith</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="location"></label>
-        <input type="text" name='location' onChange={handleInputChange} value={inputValue} />
-      </form>
-      <Prompt
-        showPrompt={props.showPrompt}
-        issCoordinates={props.issCoordinates}
-        issEarthLocation={props.issEarthLocation}
-        distance={props.distance}
-      />
-    </HomeContainer>
+    < HomeContainer >
+
+      {props.distance && <FactList distance={props.distance} facts={props.facts}></FactList>}
+      < Landing >
+        <h1>Zenith</h1>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="location"></label>
+          <input type="text" name='location' onChange={handleInputChange} value={inputValue} />
+        </form>
+        <Prompt
+          showPrompt={props.showPrompt}
+          issCoordinates={props.issCoordinates}
+          issEarthLocation={props.issEarthLocation}
+          distance={props.distance}
+        />
+      </Landing >
+    </HomeContainer >
   )
 }

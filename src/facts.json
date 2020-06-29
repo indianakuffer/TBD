@@ -1,0 +1,14 @@
+[
+  {
+    "fact": "Fact 1",
+    "distance": 100
+  },
+  {
+    "fact": "Fact 2",
+    "distance": 200
+  },
+  {
+    "fact": "Fact 3",
+    "distance": 20000000
+  }
+]

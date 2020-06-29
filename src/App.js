@@ -6,6 +6,7 @@ import Home from './Home'
 import About from './About'
 import Nav from './Nav'
 import distanceToISS from './distance_formulas.js'
+import facts from './facts.json'
 
 //----------- Styling ------------------//
 const SiteContainer = styled.div`
@@ -14,8 +15,9 @@ const SiteContainer = styled.div`
 `
 
 const StyledMain = styled.main`
-  border: 1px dashed red;
   min-height: 100vh;
+  background: black;
+  color: white;
 `
 
 const NavHamburger = styled.button`
@@ -23,6 +25,8 @@ const NavHamburger = styled.button`
   top: 10px;
   left: 10px;
   z-index: 100;
+  border: 1px solid transparent;
+  border-radius: 3px;
 `
 //--------------------------------------//
 
@@ -94,6 +98,7 @@ function App() {
             issCoordinates={issCoordinates}
             issEarthLocation={issEarthLocation}
             distance={distance}
+            facts={facts}
           />
         </Route>
         <Route path='/about'>
