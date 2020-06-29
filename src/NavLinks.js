@@ -11,6 +11,7 @@ const LinkContainer = styled.div`
 const StyledLink = styled(Link)`
   font-size: 1.2rem;
   transition: 0.3s transform ease;
+  color: white;
 
   &:hover {
     transform: translateX(15px);

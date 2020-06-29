@@ -5,21 +5,21 @@ import styled from 'styled-components'
 
 //----------- Styling ------------------//
 const NavContainer = styled.div`
-position: absolute;
-height: 100vh;
-width: 100vw;
-top: 0;
-left: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
 `
 
 const StyledNav = styled.nav`
-  position: absolute;
+  position: fixed;
   height: 100vh;
-  border: 1px dashed purple;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   width: 8rem;
+  background: #444444;
 `
 //--------------------------------------//
 

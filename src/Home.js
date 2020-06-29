@@ -5,14 +5,17 @@ import FactList from './FactList'
 
 //----------- Styling ------------------//
 const HomeContainer = styled.div`
+  position: sticky;
   display: flex;
   flex-flow: column;
   align-items: center;
+  transition: 1s height ease;
 `
 const Landing = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  height: 100vh;
 `
 //--------------------------------------//
 
@@ -31,9 +34,8 @@ export default function Home(props) {
 
   return (
     < HomeContainer >
-
       {props.distance && <FactList distance={props.distance} facts={props.facts}></FactList>}
-      < Landing >
+      <Landing >
         <h1>Zenith</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="location"></label>
