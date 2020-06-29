@@ -242,7 +242,7 @@ How long you anticipate spending on each area of development. Be sure to conside
 | -- | -- | -- |
 |App Setup|0.5|0.25|
 |API Hookup|1|0.5|
-|Build Components & Component Logic|7|0.5|
+|Build Components & Component Logic|7|1|
 |Function to Calc Distance|3|3|
 |Scrolling Logic|4|-|
 |Information Reasearch / Writing|7|-|

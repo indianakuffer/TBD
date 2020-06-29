@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Prompt from './Prompt'
 
 //----------- Styling ------------------//
 const HomeContainer = styled.div`
   display: flex;
   flex-flow: column;
+  align-items: center;
 `
 
 //--------------------------------------//
 
-export default function Home({ getUserLocation }) {
+export default function Home(props) {
   let [inputValue, setInputValue] = useState('')
 
   const handleInputChange = (e) => {
@@ -18,7 +20,7 @@ export default function Home({ getUserLocation }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    getUserLocation(inputValue)
+    props.getUserLocation(inputValue)
     setInputValue('')
   }
 
@@ -29,6 +31,12 @@ export default function Home({ getUserLocation }) {
         <label htmlFor="location"></label>
         <input type="text" name='location' onChange={handleInputChange} value={inputValue} />
       </form>
+      <Prompt
+        showPrompt={props.showPrompt}
+        issCoordinates={props.issCoordinates}
+        issEarthLocation={props.issEarthLocation}
+        distance={props.distance}
+      />
     </HomeContainer>
   )
 }

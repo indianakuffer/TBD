@@ -45,7 +45,7 @@ function getSideSAS(s1, a, s2) {
   return Math.sqrt(base)
 }
 
-export function distanceToISS(lon1, lat1, lon2, lat2) {
+export default function distanceToISS(lon1, lat1, lon2, lat2) {
   // distances in meters
   const earthRadius = 6371000
   const issHeight = 408000
@@ -61,6 +61,6 @@ export function distanceToISS(lon1, lat1, lon2, lat2) {
   const insideAngle = getAngleSSS(coordDistance, earthRadius, earthRadius)
   const outsideAngle = 180 - insideAngle
 
-  // use angle to calculate distance!
-  return getSideSAS(coordDistance, outsideAngle, issHeight)
+  // use angle to calculate distance, return in km
+  return getSideSAS(coordDistance, outsideAngle, issHeight) / 1000
 }
