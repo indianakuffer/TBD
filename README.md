@@ -244,10 +244,10 @@ How long you anticipate spending on each area of development. Be sure to conside
 |API Hookup|1|0.5|
 |Build Components & Component Logic|7|3|
 |Function to Calc Distance|3|3|
-|Scrolling Logic|4|0.5|
-|Information Reasearch / Writing|7|-|
-|Styling (Mobile Friendly)|7|0.5|
-|Total|29.5|-|
+|Scrolling Logic|4|1.5|
+|Information Reasearch / Writing|7|0.5|
+|Styling (Mobile Friendly)|7|2.5|
+|Total|33|-|
 
 ## Post-MVP
 - Distance tracker

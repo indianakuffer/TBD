@@ -16,7 +16,8 @@ const SiteContainer = styled.div`
 
 const StyledMain = styled.main`
   min-height: 100vh;
-  background: black;
+  background: #050713;
+  
   color: white;
 `
 
@@ -31,7 +32,6 @@ const NavHamburger = styled.button`
 //--------------------------------------//
 
 function App() {
-  let [userLocation, setUserLocation] = useState(null)
   let [issCoordinates, setIssCoordinates] = useState(null)
   let [issEarthLocation, setIssEarthLocation] = useState(null)
   let [distance, setDistance] = useState(null)
@@ -70,7 +70,6 @@ function App() {
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}`)
       const location = response.data.results[0]
-      setUserLocation(location)
       setDistance(distanceToISS(location.geometry.lng, location.geometry.lat, issCoordinates.longitude, issCoordinates.latitude))
       setShowPrompt(true)
     } catch (error) {
@@ -84,12 +83,10 @@ function App() {
 
   return (
     <SiteContainer>
-      {!showNav &&
-        <NavHamburger onClick={toggleNav}>
-          |||
-        </NavHamburger>
-      }
-      {showNav && <Nav toggleNav={toggleNav} />}
+      <NavHamburger onClick={toggleNav}>
+        |||
+      </NavHamburger>
+      <Nav showNav={showNav} toggleNav={toggleNav} />
       <StyledMain>
         <Route path='/' exact>
           <Home
