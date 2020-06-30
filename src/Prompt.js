@@ -16,7 +16,7 @@ export default function Prompt(props) {
 
   return (
     <PromptContainer style={props.showPrompt ? { opacity: "1" } : null}>
-      <p>The ISS is currently over {props.issEarthLocation}, {Math.round(props.distance)}km away!</p>
+      <p>The ISS is currently over {props.issEarthLocation}, {Math.round(props.distance)}km away.</p>
       <p>Let's <span style={{ fontWeight: '400' }}>scroll up</span> to see just how far away that is...</p>
     </PromptContainer>
   )

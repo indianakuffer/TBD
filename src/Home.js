@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Title from './Title'
 import Prompt from './Prompt'
 import FactList from './FactList'
+import Scrollbar from './Scrollbar'
 
 //----------- Styling ------------------//
 const HomeContainer = styled.div`
@@ -55,6 +56,7 @@ const LandingText = styled.p`
   font-size: 1.1rem;
   margin: 1rem 0 3rem 0;
   width: 55%;
+  max-width: 600px;
   font-weight: 300;
   line-height: 1.4;
 `
@@ -83,6 +85,7 @@ export default function Home(props) {
   return (
     <HomeContainer >
       {props.distance && <FactList distance={props.distance} facts={props.facts}></FactList>}
+      {props.distance && <Scrollbar distance={props.distance} />}
       <Landing ref={landingRef}>
         <Title text='Zenith' />
         <LandingHeader>What is the ISS?</LandingHeader>
@@ -92,7 +95,7 @@ export default function Home(props) {
           <br /><br />
           Travelling at 7.6 km/s, it's able to orbit earth nearly 16 times per day.
           <span style={{ textShadow: '0.01rem 0 white' }}> So where is it now? </span>
-          Enter your location below to find out!
+          Enter your location below to find out...
         </LandingText>
         <StyledForm onSubmit={handleSubmit}>
           <label htmlFor="location"></label>

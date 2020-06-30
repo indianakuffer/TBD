@@ -9,6 +9,7 @@ const FactListContainer = styled.div`
   width: 100%;
   background: linear-gradient(185deg, #000000, #050713, #0e1229, #883c24, #883c24);
   `
+
 const Stars = styled.div`
   position: absolute;
   height: 100%;
@@ -17,20 +18,9 @@ const Stars = styled.div`
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
   mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
 `
-// const twinkle = keyframes`
-// from {background-position:0 0;}
-// to {background-position:-10000px 5000px;}
-// `
-
-// const Background = styled.div`
-//   background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-//   height: 100%;
-//   width: 100%;
-//   animation: ${twinkle} 200s linear infinite;
-// `
 
 const Fact = styled.div`
-  height: 3000px;
+  height: 4000px;
   font-size: 2rem;
   font-weight: 300;
   max-width: 40%;
@@ -52,7 +42,7 @@ export default function FactList(props) {
         if (fact.distance < props.distance) {
 
           return (
-            <Fact style={{ marginLeft: `${Math.random() * 70}%` }} key={fact.fact}>
+            <Fact style={{ marginLeft: `calc(${Math.random() * 55}% + 30px)` }} key={fact.fact}>
               {Object.keys(fact).includes('image') ?
                 <>
                   <img src={fact.image} width={fact.width} alt={fact.alt} title={fact.title} />
