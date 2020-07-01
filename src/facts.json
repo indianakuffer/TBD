@@ -1,90 +1,192 @@
 [
   {
-    "fact": "Keep going, you're on the right track!",
-    "distance": 0
+    "blip": true,
+    "fact": "The ISS has an average orbit height of 408km, but unless it's directly above we still have a long ways to go!",
+    "distance": 340
   },
   {
-    "fact": "Approximately 13 kilometers of wire connects the electrical power system aboard the ISS.",
-    "distance": 200
-  },
-  {
-    "fact": "At 400km, we've reached the average orbit height of the ISS. Of course, unless it's directly above you we've got a long ways to go!",
+    "fact": "Mercury-Atlas 6, the first American orbital spaceflight, launched on February 20, 1962.",
     "distance": 400
   },
   {
-    "fact": "In 24 hours, the ISS makes 16 orbits of Earth, traveling through 16 sunrises and sunsets.",
-    "distance": 0
+    "fact": "After three orbits the spacecraft re-entered Earth's atmosphere, landing in the North Atlantic Ocean. The mission flight time was 4 hours 55 minutes and 23 seconds.",
+    "distance": 800
   },
   {
-    "fact": "The International Space Station's main solar arrays drape across the Earth above the Pacific Ocean west of Hawaii.",
-    "distance": 600,
-    "image": "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss063e031989.jpg",
+    "fact": "Aboard Friendship 7, John Glenn became the first person to orbit the Earth.",
+    "distance": 1200,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Glenn62.jpg/1280px-Glenn62.jpg",
     "width": "100%",
-    "alt": "The International Space Station's main solar arrays over Earth.",
+    "alt": "Astronaut John H. Glenn Jr. during the Mercury-Atlas 6 spaceflight.",
     "title": "Image by Nasa"
   },
   {
-    "fact": "Peggy Whitson set the record for spending the most total time living and working in space at 665 days on Sept. 2, 2017",
-    "distance": 0
+    "fact": "Spaceflight technology has come a long way since then. On November 2 2000, the first long-term residents arrived aboard the ISS.",
+    "distance": 1600
   },
   {
-    "fact": "Mount Everest, the tallest mountain above sea level, is just 8.85km tall. At 900km, we've travelled the equivalent of 10 Mount Everests.",
-    "distance": 900
+    "fact": "The ISS has been continously occupied since that date hosting astronauts, engineers, scientists, and even space tourists.",
+    "distance": 2000
   },
   {
-    "fact": "On-orbit software monitors approximately 350,000 sensors, ensuring station and crew health and safety.",
-    "distance": 1000
+    "blip": true,
+    "fact": "So far 240 individuals from 19 countries have visited the International Space Station.",
+    "distance": 2300
   },
   {
-    "fact": "This year (2020) marks the 20th anniversary of the International Space Station.",
-    "distance": 0,
+    "fact": "2020 marks the 20th anniversary of the International Space Station.",
+    "distance": 2600,
     "image": "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/nw-2020-06-005-jsc_happiness_is_keeping_our_crew_safe-300.png",
     "width": "100%",
     "alt": "A Nasa illustrated poster of Snoopy in space, celebrating the ISS 20th anniversary.",
     "title": "Image by Nasa"
   },
   {
-    "fact": "More than 3 million lines of software code on the ground support more than 1.5 million lines of flight software code.",
-    "distance": 1200
+    "blip": true,
+    "fact": "Snoopy is the astronauts' personal safety mascot.",
+    "distance": 2900
   },
   {
-    "fact": "Did you know an astronaut can return to Earth up to two inches taller than when they left? The cartilage disks in the spine expand in the zero-g environment.",
-    "distance": 0
+    "fact": "The ISS's massive solar arrays provide power to the station most of the time...",
+    "distance": 3200
   },
   {
-    "fact": "Through Expedition 58, the microgravity laboratory has hosted more than 2,700 research investigations from researchers in more than 103 countries.",
-    "distance": 1400
+    "blip": true,
+    "fact": "The solar array wingspan is 73m, 8m longer than a Boeing 777's.",
+    "distance": 3500
   },
   {
-    "fact": "This composite image, made from six frames, shows the International Space Station, with a crew of five onboard, in silhouette as it transits the Sun.",
-    "distance": 1600,
-    "image": "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/50041214891_87bdab628c_o.jpg",
+    "fact": "but every orbital cycle, the station is eclipsed by the Earth for 35 minutes.",
+    "distance": 3800
+  },
+  {
+    "fact": "The International Space Station's main solar arrays drape across the Earth above the Pacific Ocean west of Hawaii.",
+    "distance": 4200,
+    "image": "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss063e031989.jpg",
     "width": "100%",
-    "alt": "Image composite showing the ISS travelling past the sun.",
+    "alt": "The International Space Station's main solar arrays over Earth.",
     "title": "Image by Nasa"
   },
   {
-    "fact": "The ISS is 357 feet end-to-end, one yard shy of the full length of an American football field including the end zones.",
-    "distance": 1800
+    "fact": "During the eclipse, external chemical batteries power the station. These batteries have limited lifespans and need to be replaced eventually.",
+    "distance": 4600
   },
   {
+    "fact": "Crewmembers sometimes partake in dangerous EVA (extravehicular activity) spacewalks, leaving the pressurized interior to make sure the station is never without power.",
+    "distance": 5000
+  },
+  {
+    "blip": true,
+    "fact": "Astronauts and cosmonauts have conducted more than 221 spacewalks (and counting) for space station construction, maintenance and upgrades since December 1998.",
+    "distance": 5300
+  },
+  {
+    "fact": "A visualization ISS orbit from 14 September 2018 to 14 November 2018.",
+    "distance": 5700,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Animation_of_International_Space_Station_trajectory.gif",
+    "width": "100%",
+    "alt": "A visualization ISS orbit from 14 September 2018 to 14 November 2018.",
+    "title": "Image by Nasa"
+  },
+  {
+    "blip": true,
     "fact": "The ISS travels an equivalent distance to the Moon and back in about a day.",
-    "distance": 2000
+    "distance": 6000
   },
   {
-    "fact": "We're 1/100th of the way to the moon!",
-    "distance": 3844
+    "fact": "Loss of power is just one of the many threats crewmembers face. The low altitude in which the ISS orbits is also home to a variety of space debris.",
+    "distance": 6300
   },
   {
-    "fact": "At 6430km, we've travelled the length of the Great Wall of China!",
+    "blip": true,
+    "fact": "At 6430km, we've traveled the length of the Great Wall of China!",
     "distance": 6430
   },
   {
-    "fact": "At 12,756km, we've travelled the diameter of Earth. The ISS must be on nearly the other end of the world compared to you!",
-    "distance": 12756
+    "fact": "Debris large enough to destroy the station can be easily tracked, while smaller objects that escape the optical and radar instruments can cause serious damage.",
+    "distance": 6900
   },
   {
-    "fact": "Fact 3",
-    "distance": 20000000
+    "fact": "This image shows the potential damage a 7 gram object can do while traveling at the orbital velocity of the ISS.",
+    "distance": 7300,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SDIO_KEW_Lexan_projectile.jpg/1280px-SDIO_KEW_Lexan_projectile.jpg",
+    "width": "100%",
+    "alt": "image",
+    "title": "Image by U.S. Military / Department of Defense"
+  },
+  {
+    "fact": "Despite the unforgiving environment, the ISS is home to our most important microgravity labs.",
+    "distance": 7700
+  },
+  {
+    "fact": "Research is conducted in a variety of fields: astrobiology, astronomy, physical sciences, materials science, space weather, meteorology, and even space medicine.",
+    "distance": 8100
+  },
+  {
+    "blip": true,
+    "fact": "More than 3 million lines of software code on the ground support more than 1.5 million lines of flight software code.",
+    "distance": 8400
+  },
+  {
+    "fact": "The most notable ISS experiment is the Alpha Magnetic Spectrometer (AMS-02), which is instrumental in the detection of dark matter.",
+    "distance": 8700
+  },
+  {
+    "blip": true,
+    "fact": "Currently docked on the station, the AMS-02 would have required too much bandwidth and power to operate as it's own satellite.",
+    "distance": 9000
+  },
+  {
+    "fact": "This composite image, made from six frames, shows the International Space Station, with a crew of five onboard, in silhouette as it transits the Sun.",
+    "distance": 9300,
+    "image": "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/50041214891_87bdab628c_o.jpg",
+    "width": "100%",
+    "alt": "Image composite showing the ISS traveling past the sun.",
+    "title": "Image by Nasa"
+  },
+  {
+    "fact": "Medical research on the ISS helps us understand the affects of space environments on the human body. Knowledge of space medicine is crucial to our future goals of long-term space travel and space colonisation.",
+    "distance": 9700
+  },
+  {
+    "fact": "Through Expedition 58, the microgravity laboratory has hosted more than 2,700 research investigations from researchers in more than 103 countries.",
+    "distance": 10100
+  },
+  {
+    "fact": "Comet Lovejoy photographed by Expedition 30 commander Dan Burbank.",
+    "distance": 10500,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Iss030e015472_Edit.jpg/800px-Iss030e015472_Edit.jpg",
+    "width": "100%",
+    "alt": "Comet Lovejoy, as seen in space.",
+    "title": "Image by Nasa/Dan Burbank"
+  },
+  {
+    "fact": "Because of its modular design, the ISS is incredibly accomodating to equipment and lab additions.",
+    "distance": 10900
+  },
+  {
+    "blip": true,
+    "fact": "More than 20 different research payloads can be hosted outside the station at once, including Earth sensing equipment, materials science payloads, and particle physics experiments.",
+    "distance": 11100
+  },
+  {
+    "fact": "",
+    "distance": 11400,
+    "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/iss_config_exploded_view_page_0.jpg",
+    "width": "100%",
+    "alt": "Diagram of ISS structure and modules",
+    "title": "Image by Nasa"
+  },
+  {
+    "fact": "Four different cargo spacecraft deliver science, cargo and supplies: Northrop Grumman’s Cygnus, SpaceX’s Dragon, JAXA’s HTV, and the Russian Progress.",
+    "distance": 11900
+  },
+  {
+    "fact": "Up to six spacecraft can be docked at the ISS at any given time.",
+    "distance": 12300
+  },
+  {
+    "fact": "Earth is 12,742km wide, meaning the ISS is currently on the other side of the world!",
+    "distance": 12742
   }
 ]

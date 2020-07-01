@@ -11,12 +11,13 @@ const ScrollbarContainer = styled.div`
   height: 100vh;
   width: 20px;
   right: 10px;
+  z-index: 20;
 `
 const Bar = styled.div`
   position: relative;
   height: 95%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 `
 
 const Counter = styled.div`

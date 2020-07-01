@@ -10,7 +10,7 @@ const HomeContainer = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: #883c24;
+  background: #101e6b;
 `
 
 const Landing = styled.div`
@@ -20,7 +20,8 @@ const Landing = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(185deg, transparent 80%, #d68e1a);
+  // background: linear-gradient(185deg, transparent 80%, #d68e1a);
+  background: linear-gradient(185deg,transparent 70%,#d68e1acf 85%, white);
 `
 const StyledForm = styled.form`
   width: 100%;
@@ -88,12 +89,12 @@ export default function Home(props) {
       {props.distance && <Scrollbar distance={props.distance} />}
       <Landing ref={landingRef}>
         <Title text='Zenith' />
-        <LandingHeader>What is the ISS?</LandingHeader>
+        {/* <LandingHeader>What is the ISS?</LandingHeader> */}
         <LandingText>
           The International Space Station is a modular spacecraft and science laboratory in low orbit around Earth, large enough to serve as a home for crews of astronauts and cosmonauts.
           It's a multi-national collaborative effort of our world's greatest space agencies.
           <br /><br />
-          Travelling at 7.6 km/s, it's able to orbit earth nearly 16 times per day.
+          Traveling at 7.6 km/s, it's able to orbit earth nearly 16 times per day.
           <span style={{ textShadow: '0.01rem 0 white' }}> So where is it now? </span>
           Enter your location below to find out...
         </LandingText>

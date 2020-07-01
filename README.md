@@ -245,9 +245,9 @@ How long you anticipate spending on each area of development. Be sure to conside
 |Build Components & Component Logic|7|3.5|
 |Function to Calc Distance|3|3|
 |Scrolling Logic|4|3.5|
-|Information Reasearch / Writing|7|1|
-|Styling (Mobile Friendly)|7|2.5|
-|Total|29.5|15.25|
+|Information Reasearch / Writing|7|6.5|
+|Styling (Mobile Friendly)|7|5|
+|Total|29.5|24.25|
 
 ## Post-MVP
 - Distance tracker

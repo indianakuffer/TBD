@@ -12,8 +12,6 @@ const PromptContainer = styled.div`
 //--------------------------------------//
 
 export default function Prompt(props) {
-  // props.issCoordinates.iss_position.longitude
-
   return (
     <PromptContainer style={props.showPrompt ? { opacity: "1" } : null}>
       <p>The ISS is currently over {props.issEarthLocation}, {Math.round(props.distance)}km away.</p>
