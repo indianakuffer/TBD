@@ -1,5 +1,7 @@
 ## Zenith
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b1cae77-5871-431c-afa1-728306751c9f/deploy-status)](https://app.netlify.com/sites/hardcore-bardeen-54d292/deploys)
+
 Zenith is a web experience that calculates the user's distance from the International Space Station (ISS). After loading, the user is presented with a long scroll experience peppered with facts about the ISS, space, and the distance they've 'travelled' until they reach the ISS. The necessary scroll distance is based on how far the user is from the ISS.
 
 ## MVP APIS
