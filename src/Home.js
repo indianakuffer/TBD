@@ -18,7 +18,7 @@ const Landing = styled.div`
   flex-flow: column;
   padding-top: 10vh;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(185deg,transparent 70%,#d68e1acf 85%, white);
 `
