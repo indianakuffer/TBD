@@ -48,9 +48,13 @@ function App() {
   useEffect(() => {
     const getIssCoordinates = async () => {
       try {
-        const response = await axios.get('http://api.open-notify.org/iss-now')
-        setIssCoordinates(response.data.iss_position)
-        getIssEarthLocation(response.data.iss_position.longitude, response.data.iss_position.latitude)
+        // const response = await axios.get('http://api.open-notify.org/iss-now')
+        // setIssCoordinates(response.data.iss_position)
+        // getIssEarthLocation(response.data.iss_position.longitude, response.data.iss_position.latitude)
+        const response = await axios.get('https://api.wheretheiss.at/v1/satellites/25544')
+        console.log(response.data)
+        setIssCoordinates(response.data)
+        getIssEarthLocation(response.data.longitude, response.data.latitude)
       } catch (error) {
         console.error(error)
       }
