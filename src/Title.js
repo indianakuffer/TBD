@@ -8,6 +8,9 @@ const StyledTitle = styled.h1`
   font-size: 6rem;
   font-weight: 300;
   letter-spacing: 0.3rem;
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
 `
 //--------------------------------------//
 
