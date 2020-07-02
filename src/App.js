@@ -52,7 +52,6 @@ function App() {
         // setIssCoordinates(response.data.iss_position)
         // getIssEarthLocation(response.data.iss_position.longitude, response.data.iss_position.latitude)
         const response = await axios.get('https://api.wheretheiss.at/v1/satellites/25544')
-        console.log(response.data)
         setIssCoordinates(response.data)
         getIssEarthLocation(response.data.longitude, response.data.latitude)
       } catch (error) {
@@ -66,7 +65,8 @@ function App() {
 
 
   const getIssEarthLocation = async (lon, lat) => {
-    const apiKey = process.env.OCG_API_KEY
+    // const apiKey = process.env.REACT_APP_OCG_API_KEY
+    const apiKey = '777ea9e72f594073a460308bbbe9d2ca'
     const q = `${lat},${lon}`
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${q}`)
@@ -77,7 +77,7 @@ function App() {
   }
 
   const getUserLocation = async (address) => {
-    const apiKey = process.env.OCG_API_KEY
+    const apiKey = '777ea9e72f594073a460308bbbe9d2ca'
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}`)
       const location = response.data.results[0]
