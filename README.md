@@ -248,8 +248,8 @@ How long you anticipate spending on each area of development. Be sure to conside
 |Function to Calc Distance|3|3|
 |Scrolling Logic|4|3.5|
 |Information Reasearch / Writing|7|6.5|
-|Styling (Mobile Friendly)|7|6.5|
-|Total|29.5|25.5|
+|Styling (Mobile Friendly)|7|8|
+|Total|29.5|27|
 
 ## Post-MVP
 - Distance tracker

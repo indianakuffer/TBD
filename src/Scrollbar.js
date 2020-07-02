@@ -12,6 +12,9 @@ const ScrollbarContainer = styled.div`
   width: 20px;
   right: 10px;
   z-index: 20;
+  @media (max-width: 768px) {
+    height: 92vh;
+  }
 `
 const Bar = styled.div`
   position: relative;
