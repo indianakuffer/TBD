@@ -45,22 +45,18 @@ export default function Scrollbar(props) {
   let [scrollDistance, setScrollDistance] = useState(0)
   let [scrollPercent, setScrollPercent] = useState(0)
 
-  const handleScroll = () => {
-    // setScrollDistance(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * 1)
-    setScrollPercent(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * 1)
-    setScrollDistance(Math.trunc(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * props.distance))
-  }
+
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, true);
-  }, [])
-
-  // clean up event listener on unmount
-  useEffect(() => {
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setScrollPercent(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * 1)
+      setScrollDistance(Math.trunc(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * props.distance))
     }
-  }, [])
+    window.addEventListener('scroll', handleScroll, true)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
 
   return (
     <ScrollbarContainer>

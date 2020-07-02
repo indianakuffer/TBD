@@ -46,20 +46,20 @@ function App() {
   let [showNav, setShowNav] = useState(false)
 
   useEffect(() => {
-    // Get ISS information on load
+    const getIssCoordinates = async () => {
+      try {
+        const response = await axios.get('http://api.open-notify.org/iss-now')
+        setIssCoordinates(response.data.iss_position)
+        getIssEarthLocation(response.data.iss_position.longitude, response.data.iss_position.latitude)
+      } catch (error) {
+        console.error(error)
+      }
+
+    }
     getIssCoordinates()
   }, [])
 
-  const getIssCoordinates = async () => {
-    try {
-      const response = await axios.get('http://api.open-notify.org/iss-now')
-      setIssCoordinates(response.data.iss_position)
-      getIssEarthLocation(response.data.iss_position.longitude, response.data.iss_position.latitude)
-    } catch (error) {
-      console.error(error)
-    }
 
-  }
 
   const getIssEarthLocation = async (lon, lat) => {
     const apiKey = process.env.REACT_APP_OCG_API_KEY

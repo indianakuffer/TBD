@@ -65,7 +65,7 @@ export default function FactList(props) {
                 : Object.keys(fact).includes('blip') ? <span>{fact.fact}</span> : fact.fact}
             </Fact>
           )
-        }
+        } else return <></>
       })}
       <End distance={props.distance} />
     </FactListContainer>
