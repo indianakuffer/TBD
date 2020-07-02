@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import cloudsImage from './images/cloud_pattern.png'
+import starsImage from './images/stars.png'
 import End from './End'
 
 //----------- Styling ------------------//
@@ -37,7 +38,7 @@ const Stars = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;  
-  background: url('https://img.pngio.com/star-png-images-transparent-free-download-pngmartcom-transparent-stars-background-1680_480.png');
+  background: url(${starsImage});
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
   mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
 `
