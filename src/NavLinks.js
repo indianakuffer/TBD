@@ -6,16 +6,18 @@ import styled from 'styled-components'
 const LinkContainer = styled.div`
   display: flex;
   flex-flow: column;
+  width: 100%;
 `
 
 const StyledLink = styled(Link)`
   font-size: 1.2rem;
   transition: 0.3s transform ease;
   color: white;
-  padding-left: 10px;
+  padding: 10px;
+  text-decoration: none;
 
   &:hover {
-    transform: translateX(15px);
+    background-color: #ffffff31;
   }
 `
 

@@ -10,7 +10,7 @@ const HomeContainer = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: #101e6b;
+  background: #023e7d;
 `
 
 const Landing = styled.div`
@@ -20,7 +20,6 @@ const Landing = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  // background: linear-gradient(185deg, transparent 80%, #d68e1a);
   background: linear-gradient(185deg,transparent 70%,#d68e1acf 85%, white);
 `
 const StyledForm = styled.form`
@@ -48,10 +47,6 @@ const StyledInput = styled.input`
     outline: none;
     box-shadow: 0 0 3px white;
   }
-`
-const LandingHeader = styled.h2`
-  font-size: 1.3rem;
-  margin: 0;
 `
 const LandingText = styled.p`
   font-size: 1.1rem;
@@ -89,7 +84,6 @@ export default function Home(props) {
       {props.distance && <Scrollbar distance={props.distance} />}
       <Landing ref={landingRef}>
         <Title text='Zenith' />
-        {/* <LandingHeader>What is the ISS?</LandingHeader> */}
         <LandingText>
           The International Space Station is a modular spacecraft and science laboratory in low orbit around Earth, large enough to serve as a home for crews of astronauts and cosmonauts.
           It's a multi-national collaborative effort of our world's greatest space agencies.

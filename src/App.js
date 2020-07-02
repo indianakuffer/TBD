@@ -7,6 +7,7 @@ import About from './About'
 import Nav from './Nav'
 import distanceToISS from './distance_formulas.js'
 import facts from './facts.json'
+import menuIcon from './images/menu.svg'
 
 //----------- Styling ------------------//
 const SiteContainer = styled.div`
@@ -17,17 +18,23 @@ const SiteContainer = styled.div`
 const StyledMain = styled.main`
   min-height: 100vh;
   background: #050713;
-  
   color: white;
 `
 
-const NavHamburger = styled.button`
+const NavHamburger = styled.img`
   position: fixed;
   top: 10px;
   left: 10px;
   z-index: 100;
   border: 1px solid transparent;
   border-radius: 3px;
+  filter: invert();
+  width: 35px;
+  opacity: 0.7;
+  transition: 0.3s opacity ease;
+  &:hover {
+    opacity: 1;
+  }
 `
 //--------------------------------------//
 
@@ -83,9 +90,7 @@ function App() {
 
   return (
     <SiteContainer>
-      <NavHamburger onClick={toggleNav}>
-        |||
-      </NavHamburger>
+      {!showNav && <NavHamburger src={menuIcon} onClick={toggleNav} />}
       <Nav showNav={showNav} toggleNav={toggleNav} />
       <StyledMain>
         <Route path='/' exact>
