@@ -28,7 +28,9 @@ export default function About() {
     <AboutContainer>
       <Title text='About' />
       <AboutText>
-        Zenith is a web experience that determines how far you are from the International Space Station. Scroll along a visualization of the distance peppered with facts about space and the ISS until you reach your destination.
+        At some point, you've probably been directly underneath the ISS, 408km above right on the edge of the exosphere.
+        But what about all the other times? What about right now?
+        Scroll along a visualization of your distance, peppered with facts about the ISS and space history until you reach your destination.
       </AboutText>
     </AboutContainer>
   )

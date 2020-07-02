@@ -31,6 +31,10 @@ const StyledNav = styled.nav`
   z-index: 100;
   transition: 0.4s max-width ease;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    width: 10rem;
+  }
 `
 
 const NavFooter = styled.footer`
@@ -58,7 +62,7 @@ const ContactIcons = styled.div`
 export default function Nav(props) {
   return (
     <NavContainer onClick={props.toggleNav} style={props.showNav ? { maxWidth: '100vw' } : null}>
-      <StyledNav onClick={(e) => e.stopPropagation()} style={props.showNav ? { maxWidth: '20vw', borderColor: 'white' } : null}>
+      <StyledNav onClick={(e) => e.stopPropagation()} style={props.showNav ? { maxWidth: '30vw', borderColor: 'white' } : null}>
         <NavLinks />
         <NavFooter>
           <ContactIcons>

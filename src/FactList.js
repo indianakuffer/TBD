@@ -24,6 +24,13 @@ const Fact = styled.div`
   span {
     font-size: 1.2rem;
   }
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    max-width: 60%;
+    span {
+      font-size: 1.1rem;
+    }
+  }
 `
 
 const Stars = styled.div`
@@ -56,7 +63,7 @@ export default function FactList(props) {
       {props.facts.map(fact => {
         if (fact.distance < props.distance) {
           return (
-            <Fact style={{ marginLeft: `calc(${Math.random() * 55}% + 30px)`, top: `calc(${props.distance * 10 - fact.distance * 10}px + 100vh)` }} key={fact.fact}>
+            <Fact style={{ marginLeft: `calc(${Math.random() * 45}% + 10px)`, top: `calc(${props.distance * 10 - fact.distance * 10}px + 100vh)` }} key={fact.fact}>
               {Object.keys(fact).includes('image') ?
                 <>
                   <img src={fact.image} width={fact.width} alt={fact.alt} title={fact.title} />

@@ -8,6 +8,10 @@ const PromptContainer = styled.div`
   opacity: 0;
   transition: 1s opacity ease;
   max-width: 65%;
+  @media (max-width: 768px) {
+    max-width: 80%;
+    font-size: 1.2rem;
+  }
 `
 //--------------------------------------//
 

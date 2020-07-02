@@ -47,6 +47,9 @@ const StyledInput = styled.input`
     outline: none;
     box-shadow: 0 0 3px white;
   }
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 const LandingText = styled.p`
   font-size: 1.1rem;
@@ -55,6 +58,10 @@ const LandingText = styled.p`
   max-width: 600px;
   font-weight: 300;
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 //--------------------------------------//
 
