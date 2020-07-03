@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 //----------- Styling ------------------//
-
 const ScrollbarContainer = styled.div`
   position: fixed;
   display: flex;
@@ -12,6 +11,7 @@ const ScrollbarContainer = styled.div`
   width: 20px;
   right: 10px;
   z-index: 20;
+
   @media (max-width: 768px) {
     height: 92vh;
   }
@@ -25,35 +25,31 @@ const Bar = styled.div`
 
 const Counter = styled.div`
   position: absolute;
-  transform: translate(-70px, 18px);
-  width: 4rem;
   bottom: 0%;
+  width: 4rem;
   font-size: 1rem;
   text-align: right;
+  transform: translate(-70px, 18px);
 `
 
 const Line = styled.div`
-position: absolute;
-bottom: 0;
-height: 0%;
-border-left: 1px solid white;
-transform: translateX(10px);
+  position: absolute;
+  bottom: 0;
+  height: 0%;
+  border-left: 1px solid white;
+  transform: translateX(10px);
 `
-
 //--------------------------------------//
-
-
 
 export default function Scrollbar(props) {
   let [scrollDistance, setScrollDistance] = useState(0)
   let [scrollPercent, setScrollPercent] = useState(0)
 
-
-
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPercent(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * 1)
-      setScrollDistance(Math.trunc(Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight)) * props.distance))
+      const percentage = Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight))
+      setScrollPercent(percentage)
+      setScrollDistance(Math.trunc(percentage * props.distance))
     }
     window.addEventListener('scroll', handleScroll, true)
     return () => {
@@ -66,6 +62,7 @@ export default function Scrollbar(props) {
       <Bar>
         <Counter style={{ bottom: scrollPercent * 100 + '%' }}>{scrollDistance}km</Counter>
         <Line style={{ height: scrollPercent * 100 + '%' }}>&nbsp;</Line>
+        <Line style={{ height: '100%', borderLeft: '1px dashed white' }}>&nbsp;</Line>
       </Bar>
     </ScrollbarContainer>
   )
