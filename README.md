@@ -5,14 +5,14 @@
 Zenith is a web experience that calculates the user's distance from the International Space Station (ISS). After loading, the user is presented with a long scroll experience peppered with facts about the ISS, space, and the distance they've 'travelled' until they reach the ISS. The necessary scroll distance is based on how far the user is from the ISS.
 
 ## MVP APIS
-Zenith's MVP will make use of two APIs: [Open Notify's ISS Tracker](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to retrieve the current location of the ISS and [Open Cage Data's Geocoding API](https://opencagedata.com/api) to retrieve longitude and latitude coordinates based on the user's submitted location. Snippets below:
+Zenith's MVP will make use of two APIs: <del>[Open Notify's ISS Tracker](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)</del> [Where the ISS At's ISS Tracker](https://wheretheiss.at/) to retrieve the current location of the ISS and [Open Cage Data's Geocoding API](https://opencagedata.com/api) to retrieve longitude and latitude coordinates based on the user's submitted location. Snippets below:
 
 ### Open Notify ISS Location
 
 ```JS
 useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('http://api.open-notify.org/iss-now')
+      const response = await axios.get('https://api.wheretheiss.at/v1/satellites/25544')
       console.log(response)
     }
     fetchData()
@@ -24,12 +24,19 @@ useEffect(() => {
 
 ```JSON
 {
-    "message": "success",
-    "timestamp": 1593274627,
-    "iss_position": {
-        "longitude": "-129.9561",
-        "latitude": "51.5549"
-    }
+    "name": "iss",
+    "id": 25544,
+    "latitude": 49.243967020411,
+    "longitude": 162.22964201678,
+    "altitude": 422.27563355766,
+    "velocity": 27593.733535534,
+    "visibility": "daylight",
+    "footprint": 4519.022790061,
+    "timestamp": 1593708999,
+    "daynum": 2459033.2060069,
+    "solar_lat": 22.959031741879,
+    "solar_lon": 286.89479450137,
+    "units": "kilometers"
 }
 ```
 
@@ -41,7 +48,6 @@ useEffect(() => {
 ```JS
 useEffect(() => {
     const fetchData = async () => {
-      const apiKey = process.env.REACT_APP_OCG_API_KEY
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${'20 W 34th St New York, NY 10001'}`)
       console.log(response)
     }
@@ -244,12 +250,12 @@ How long you anticipate spending on each area of development. Be sure to conside
 | -- | -- | -- |
 |App Setup|0.5|0.25|
 |API Hookup|1|0.5|
-|Build Components & Component Logic|7|4.25|
+|Build Components & Component Logic|7|5.25|
 |Function to Calc Distance|3|3|
 |Scrolling Logic|4|3.5|
-|Information Reasearch / Writing|7|6.5|
-|Styling (Mobile Friendly)|7|8|
-|Total|29.5|27|
+|Information Reasearch / Writing|7|7.5|
+|Styling (Mobile Friendly)|7|9|
+|Total|29.5|30|
 
 ## Post-MVP
 - Distance tracker
