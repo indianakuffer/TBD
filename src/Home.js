@@ -12,40 +12,37 @@ const HomeContainer = styled.div`
   align-items: center;
   background: #023e7d;
 `
-
 const Landing = styled.div`
   display: flex;
   flex-flow: column;
-  padding-top: 10vh;
   align-items: center;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
+  padding-top: 10vh;
   background: linear-gradient(185deg,transparent 70%,#d68e1acf 85%, white);
   @media (max-width: 768px) {
     padding-top: 6vh;
   }
 `
 const StyledForm = styled.form`
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
 `
 const StyledInput = styled.input`
-  background: transparent;
-  color: white;
-  border: 1px solid white;
   width: 60%;
   max-width: 700px;
   height: 3rem;
-  font-size: 1.2rem;
-  border-radius: 0.7rem;
   padding: 0 0.7rem;
-
+  border: 1px solid white;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  color: white;
+  background: transparent;
   &::placeholder {
     color: white;
     opacity: 0.3;
   }
-
   &:focus {
     outline: none;
     box-shadow: 0 0 3px white;
@@ -55,13 +52,12 @@ const StyledInput = styled.input`
   }
 `
 const LandingText = styled.p`
-  font-size: 1.1rem;
-  margin: 1rem 0 3rem 0;
   width: 55%;
   max-width: 600px;
+  margin: 1rem 0 3rem 0;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.4;
-
   @media (max-width: 768px) {
     width: 80%;
   }
@@ -72,10 +68,6 @@ export default function Home(props) {
   let [inputValue, setInputValue] = useState('')
   const landingRef = useRef()
 
-  const scrollToLanding = () => {
-    window.scrollTo(0, landingRef.current.offsetTop)
-  }
-
   const handleInputChange = (e) => {
     setInputValue(e.target.value)
   }
@@ -84,6 +76,10 @@ export default function Home(props) {
     e.preventDefault()
     props.getUserLocation(inputValue)
     setInputValue('')
+  }
+
+  const scrollToLanding = () => {
+    window.scrollTo(0, landingRef.current.offsetTop)
   }
 
   useEffect(scrollToLanding, [props.distance])

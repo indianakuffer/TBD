@@ -11,7 +11,6 @@ const ScrollbarContainer = styled.div`
   width: 20px;
   right: 10px;
   z-index: 20;
-
   @media (max-width: 768px) {
     height: 92vh;
   }
@@ -22,7 +21,6 @@ const Bar = styled.div`
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 `
-
 const Counter = styled.div`
   position: absolute;
   bottom: 0%;
@@ -31,7 +29,6 @@ const Counter = styled.div`
   text-align: right;
   transform: translate(-70px, 18px);
 `
-
 const Line = styled.div`
   position: absolute;
   bottom: 0;

@@ -4,40 +4,35 @@ import Title from './Title'
 import issLogo from './images/iss_logo.png'
 
 //----------- Styling ------------------//
-
 const AboutContainer = styled.div`
   display: flex;
-  height: 100vh;
   flex-flow: column;
   align-items: center;
+  height: 100vh;
   padding-top: 10vh;
   background: linear-gradient(185deg, transparent 80%, #151b42);
   @media (max-width: 768px) {
     padding-top: 6vh;
   }
 `
-
 const AboutText = styled.p`
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 1.4;
   width: 65%;
   max-width: 600px;
   margin: 20px;
-  
-  @media (max-width: 768px) {
-    font-size: 1.1rem;
-    order: 1;
-  }
-
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.4;
   a {
     color: white;
     &:hover {
       font-weight: 400;
     }
   }
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    order: 1;
+  }
 `
-
 const StyledDiv = styled.div`
   display: flex;
   align-items: center;
@@ -45,13 +40,11 @@ const StyledDiv = styled.div`
     flex-flow: column;
   }
 `
-
 const Logo = styled.img`
   width: 20vw;
   min-width: 180px;
   max-width: 300px;
 `
-
 //--------------------------------------//
 
 export default function About() {
@@ -69,7 +62,6 @@ export default function About() {
       </AboutText>
         <Logo src={issLogo} />
       </StyledDiv>
-
     </AboutContainer>
   )
 }

@@ -14,26 +14,23 @@ const FactListContainer = styled.div`
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1) 99.6%,rgba(0,0,0,0));
   mask-image: linear-gradient(rgba(0,0,0,1) 99.6%,rgba(0,0,0,0));
 `
-
 const Fact = styled.div`
   position: absolute;
-  font-size: 2rem;
-  font-weight: 300;
   max-width: 40%;
   z-index: 10;
-
+  font-size: 2rem;
+  font-weight: 300;
   span {
     font-size: 1.2rem;
   }
   @media (max-width: 768px) {
-    font-size: 1.3rem;
     max-width: 60%;
+    font-size: 1.3rem;
     span {
       font-size: 1.1rem;
     }
   }
 `
-
 const Stars = styled.div`
   position: absolute;
   height: 100%;
@@ -42,7 +39,6 @@ const Stars = styled.div`
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
   mask-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0) 35%);
 `
-
 const Clouds = styled.div`
   position: absolute;
   height: 100%;

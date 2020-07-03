@@ -8,19 +8,16 @@ const LinkContainer = styled.div`
   flex-flow: column;
   width: 100%;
 `
-
 const StyledLink = styled(Link)`
   font-size: 1.2rem;
-  transition: 0.3s transform ease;
   color: white;
-  padding: 10px;
   text-decoration: none;
-
+  padding: 10px;
+  transition: 0.3s transform ease;
   &:hover {
     background-color: #ffffff31;
   }
 `
-
 //--------------------------------------//
 
 export default function NavLinks() {

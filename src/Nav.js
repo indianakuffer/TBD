@@ -8,42 +8,40 @@ import linkedInIcon from './images/linkedin.png'
 //----------- Styling ------------------//
 const NavContainer = styled.div`
   position: fixed;
-  height: 100vh;
-  max-width: 0;
-  width: 100vw;
   top: 0;
   left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 0;
   z-index: 100;
 `
-
 const StyledNav = styled.nav`
   position: fixed;
-  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 0;
+  height: 100vh;
   width: 8rem;
+  max-width: 0;
   background: #0000005c;
-  border-right: 1px solid transparent;
+  border-right: 1px solid white;
   backdrop-filter: blur(10px);
   z-index: 100;
   transition: 0.4s max-width ease;
+  transform: translateX(-1px);
   overflow-x: hidden;
-
   @media (max-width: 768px) {
     width: 10rem;
   }
 `
-
 const NavFooter = styled.footer`
   display: flex;
   flex-flow: column;
   margin-bottom: 5px;
-  color: white;
-  text-align: center;
   font-size: 0.85rem;
+  text-align: center;
+  color: white;
 `
 const ContactIcons = styled.div`
   display: flex;
@@ -62,7 +60,7 @@ const ContactIcons = styled.div`
 export default function Nav(props) {
   return (
     <NavContainer onClick={props.toggleNav} style={props.showNav ? { maxWidth: '100vw' } : null}>
-      <StyledNav onClick={(e) => e.stopPropagation()} style={props.showNav ? { maxWidth: '30vw', borderColor: 'white' } : null}>
+      <StyledNav onClick={(e) => e.stopPropagation()} style={props.showNav ? { maxWidth: '30vw' } : null}>
         <NavLinks />
         <NavFooter>
           <ContactIcons>

@@ -5,22 +5,20 @@ import issImage from './images/ISS.png'
 //----------- Styling ------------------//
 const EndContainer = styled.div`
   position: absolute;
-  font-size: 2rem;
-  z-index: 10;
-
-  padding: 10vh 5% 0 5%;
-  padding-top: 10vh;
   top: 0;
   height: 102vh;
-  font-weight: 400;
   width: 100vw;
+  padding: 10vh 5% 0 5%;
+  padding-top: 10vh;
+  z-index: 10;
+  font-size: 2rem;
+  font-weight: 400;
   background-image: url('${issImage}');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1) 95%,rgba(0,0,0,0));
   mask-image: linear-gradient(rgba(0,0,0,1) 95%,rgba(0,0,0,0));
-
   h1 {
     margin-top: 0;
   }
