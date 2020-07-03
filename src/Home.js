@@ -21,6 +21,9 @@ const Landing = styled.div`
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(185deg,transparent 70%,#d68e1acf 85%, white);
+  @media (max-width: 768px) {
+    padding-top: 6vh;
+  }
 `
 const StyledForm = styled.form`
   width: 100%;

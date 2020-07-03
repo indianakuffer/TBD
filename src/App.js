@@ -62,8 +62,6 @@ function App() {
     getIssCoordinates()
   }, [])
 
-
-
   const getIssEarthLocation = async (lon, lat) => {
     // const apiKey = process.env.REACT_APP_OCG_API_KEY
     const apiKey = '777ea9e72f594073a460308bbbe9d2ca'
