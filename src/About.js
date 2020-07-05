@@ -8,7 +8,7 @@ const AboutContainer = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 10vh;
   background: linear-gradient(185deg, transparent 80%, #151b42);
   @media (max-width: 768px) {
