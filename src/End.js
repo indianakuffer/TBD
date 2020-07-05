@@ -40,7 +40,7 @@ export default function End(props) {
   return (
     <EndContainer>
       <h1>At last</h1>
-      <p>You've reached the ISS. The single largest space structure and stepping stone to the cosmos, {Math.trunc(props.distance)}km away.</p>
+      <p>You've reached the ISS. The single largest space structure and stepping stone to the cosmos, {props.usStandard ? `${Math.trunc(props.usDistance)} miles` : `${Math.trunc(props.distance)}km`} away.</p>
       <p>Thank you for taking this journey, if you would like to learn more about the ISS check out NASA's <a href='https://www.nasa.gov/mission_pages/station/main/index.html' target='_blank' rel='noopener noreferrer'>mission page</a> or watch this <a href='https://www.youtube.com/watch?v=KlK_bLnqmas' target='_blank' rel='noopener noreferrer'>recent spacewalk footage.</a></p>
     </EndContainer>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import UnitToggle from './UnitToggle'
 
 //----------- Styling ------------------//
 const LinkContainer = styled.div`
@@ -20,11 +21,12 @@ const StyledLink = styled(Link)`
 `
 //--------------------------------------//
 
-export default function NavLinks() {
+export default function NavLinks(props) {
   return (
     <LinkContainer>
       <StyledLink to='/'>Home</StyledLink>
       <StyledLink to='/about'>About</StyledLink>
+      <UnitToggle usStandard={props.usStandard} toggleStandard={props.toggleStandard} />
     </LinkContainer>
   )
 }

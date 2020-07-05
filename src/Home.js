@@ -86,15 +86,15 @@ export default function Home(props) {
 
   return (
     <HomeContainer >
-      {props.distance && <FactList distance={props.distance} facts={props.facts}></FactList>}
-      {props.distance && <Scrollbar distance={props.distance} />}
+      {props.distance && <FactList distance={props.distance} facts={props.facts} usDistance={props.usDistance} usStandard={props.usStandard}></FactList>}
+      {props.distance && <Scrollbar distance={props.distance} usDistance={props.usDistance} usStandard={props.usStandard} />}
       <Landing ref={landingRef}>
         <Title text='Zenith' />
         <LandingText>
           The International Space Station is a modular spacecraft and science laboratory in low orbit around Earth, large enough to serve as a home for crews of astronauts and cosmonauts.
           It's a multi-national collaborative effort of our world's greatest space agencies.
           <br /><br />
-          Traveling at 7.6 km/s, it's able to orbit earth nearly 16 times per day.
+          Traveling at {props.usStandard ? `${(7.6 / 1.609).toFixed(1)} mph` : `7.6 km/s`}, it's able to orbit earth nearly 16 times per day.
           <span style={{ textShadow: '0.01rem 0 white' }}> So where is it now? </span>
           Enter your location below to find out...
         </LandingText>
@@ -107,6 +107,8 @@ export default function Home(props) {
           issCoordinates={props.issCoordinates}
           issEarthLocation={props.issEarthLocation}
           distance={props.distance}
+          usDistance={props.usDistance}
+          usStandard={props.usStandard}
         />
       </Landing >
     </HomeContainer >

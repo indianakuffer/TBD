@@ -6,7 +6,7 @@ const PromptContainer = styled.div`
   max-width: 65%;
   font-size: 1.5rem;  
   font-weight: 300;
-  opacity: 0;
+  opacity: ${props => props.showPrompt ? '1' : '0'};
   transition: 1s opacity ease;
   @media (max-width: 768px) {
     max-width: 80%;
@@ -17,8 +17,8 @@ const PromptContainer = styled.div`
 
 export default function Prompt(props) {
   return (
-    <PromptContainer style={props.showPrompt ? { opacity: "1" } : null}>
-      <p>The ISS is currently over {props.issEarthLocation}, {Math.round(props.distance)}km away.</p>
+    <PromptContainer showPrompt={props.showPrompt}>
+      <p>The ISS is currently over {props.issEarthLocation}, {props.usStandard ? `${Math.round(props.usDistance)} miles` : `${Math.round(props.distance)}km`} away.</p>
       <p>Let's <span style={{ fontWeight: '400' }}>scroll up</span> to see just how far away that is...</p>
     </PromptContainer>
   )

@@ -2,6 +2,7 @@
   {
     "blip": true,
     "fact": "The ISS has an average orbit height of 408km, but unless it's directly above we still have a long ways to go!",
+    "usFact": "The ISS has an average orbit height of 254 miles, but unless it's directly above we still have a long ways to go!",
     "distance": 340
   },
   {
@@ -53,6 +54,7 @@
   {
     "blip": true,
     "fact": "The solar array wingspan is 73m, 8m longer than a Boeing 777's.",
+    "usFact": "The solar array wingspan is 240ft, 26ft longer than a Boeing 777's.",
     "distance": 3500
   },
   {
@@ -100,6 +102,7 @@
   {
     "blip": true,
     "fact": "At 6430km, we've traveled the length of the Great Wall of China!",
+    "usFact": "At 3995 miles, we've traveled the length of the Great Wall of China!",
     "distance": 6430
   },
   {
@@ -187,6 +190,7 @@
   },
   {
     "fact": "Earth is 12,742km wide, meaning the ISS is currently on the other side of the world!",
+    "usFact": "Earth is 7,917 miles wide, meaning the ISS is currently on the other side of the world!",
     "distance": 12742
   }
 ]

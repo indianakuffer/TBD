@@ -12,7 +12,7 @@ const NavContainer = styled.div`
   left: 0;
   height: 100vh;
   width: 100vw;
-  max-width: 0;
+  max-width: ${props => props.showNav ? '100vw' : '0'};
   z-index: 100;
 `
 const StyledNav = styled.nav`
@@ -23,7 +23,7 @@ const StyledNav = styled.nav`
   align-items: center;
   height: 100vh;
   width: 8rem;
-  max-width: 0;
+  max-width: ${props => props.showNav ? '30vw' : '0'};
   background: #0000005c;
   border-right: 1px solid white;
   backdrop-filter: blur(10px);
@@ -59,9 +59,9 @@ const ContactIcons = styled.div`
 
 export default function Nav(props) {
   return (
-    <NavContainer onClick={props.toggleNav} style={props.showNav ? { maxWidth: '100vw' } : null}>
-      <StyledNav onClick={(e) => e.stopPropagation()} style={props.showNav ? { maxWidth: '30vw' } : null}>
-        <NavLinks />
+    <NavContainer onClick={props.toggleNav} showNav={props.showNav}>
+      <StyledNav onClick={(e) => e.stopPropagation()} showNav={props.showNav}>
+        <NavLinks usStandard={props.usStandard} toggleStandard={props.toggleStandard} />
         <NavFooter>
           <ContactIcons>
             <a href='https://github.com/indianakuffer' target='_blank' rel='noreferrer noopener'><img src={githubIcon} alt="" /></a>

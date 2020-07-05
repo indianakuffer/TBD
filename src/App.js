@@ -38,8 +38,10 @@ export default function App() {
   let [issCoordinates, setIssCoordinates] = useState(null)
   let [issEarthLocation, setIssEarthLocation] = useState(null)
   let [distance, setDistance] = useState(null)
+  let [usDistance, setUsDistance] = useState(null)
   let [showPrompt, setShowPrompt] = useState(false)
   let [showNav, setShowNav] = useState(false)
+  let [usStandard, setUsStandard] = useState(false)
 
   useEffect(() => {
     const getIssCoordinates = async () => {
@@ -70,7 +72,9 @@ export default function App() {
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}`)
       const location = response.data.results[0]
-      setDistance(distanceToISS(location.geometry.lng, location.geometry.lat, issCoordinates.longitude, issCoordinates.latitude))
+      const kmDistance = distanceToISS(location.geometry.lng, location.geometry.lat, issCoordinates.longitude, issCoordinates.latitude)
+      setDistance(kmDistance)
+      setUsDistance(kmDistance / 1.609)
       setShowPrompt(true)
     } catch (error) {
       console.error(error)
@@ -81,10 +85,14 @@ export default function App() {
     setShowNav(!showNav)
   }
 
+  const toggleStandard = () => {
+    setUsStandard(!usStandard)
+  }
+
   return (
     <SiteContainer>
       {!showNav && <NavHamburger src={menuIcon} onClick={toggleNav} />}
-      <Nav showNav={showNav} toggleNav={toggleNav} />
+      <Nav showNav={showNav} toggleNav={toggleNav} usStandard={usStandard} toggleStandard={toggleStandard} />
       <StyledMain>
         <Route path='/' exact>
           <Home
@@ -93,7 +101,9 @@ export default function App() {
             issCoordinates={issCoordinates}
             issEarthLocation={issEarthLocation}
             distance={distance}
+            usDistance={usDistance}
             facts={facts}
+            usStandard={usStandard}
           />
         </Route>
         <Route path='/about'>

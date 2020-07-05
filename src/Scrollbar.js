@@ -40,6 +40,7 @@ const Line = styled.div`
 
 export default function Scrollbar(props) {
   let [scrollDistance, setScrollDistance] = useState(0)
+  let [usScrollDistance, setUsScrollDistance] = useState(0)
   let [scrollPercent, setScrollPercent] = useState(0)
 
   useEffect(() => {
@@ -47,6 +48,7 @@ export default function Scrollbar(props) {
       const percentage = Math.abs(1 - (window.pageYOffset / window.document.body.offsetHeight))
       setScrollPercent(percentage)
       setScrollDistance(Math.trunc(percentage * props.distance))
+      setUsScrollDistance(Math.trunc(percentage * props.usDistance))
     }
     window.addEventListener('scroll', handleScroll, true)
     return () => {
@@ -57,7 +59,7 @@ export default function Scrollbar(props) {
   return (
     <ScrollbarContainer>
       <Bar>
-        <Counter style={{ bottom: scrollPercent * 100 + '%' }}>{scrollDistance}km</Counter>
+        <Counter style={{ bottom: scrollPercent * 100 + '%' }}>{props.usStandard ? `${usScrollDistance}mi` : `${scrollDistance}km`}</Counter>
         <Line style={{ height: scrollPercent * 100 + '%' }}>&nbsp;</Line>
         <Line style={{ height: '100%', borderLeft: '1px dashed white' }}>&nbsp;</Line>
       </Bar>

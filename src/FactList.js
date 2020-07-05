@@ -20,6 +20,7 @@ const Fact = styled.div`
   z-index: 10;
   font-size: 2rem;
   font-weight: 300;
+  top: ${props => `calc(${props.distance * 10 - props.factDistance * 10}px + 100vh)`};
   span {
     font-size: 1.2rem;
   }
@@ -60,18 +61,18 @@ export default function FactList(props) {
       {props.facts.map(fact => {
         if (fact.distance < props.distance) {
           return (
-            <Fact style={{ marginLeft: `calc(${Math.random() * 45}% + 10px)`, top: `calc(${props.distance * 10 - fact.distance * 10}px + 100vh)` }} key={fact.fact}>
+            <Fact distance={props.distance} factDistance={fact.distance} style={{ marginLeft: `calc(${Math.random() * 45}% + 10px)` }} key={fact.fact}>
               {Object.keys(fact).includes('image') ?
                 <>
                   <img src={fact.image} width={fact.width} alt={fact.alt} title={fact.title} />
-                  <span>{fact.fact}</span>
+                  <span>{props.usStandard && fact.usFact ? fact.usFact : fact.fact}</span>
                 </>
-                : Object.keys(fact).includes('blip') ? <span>{fact.fact}</span> : fact.fact}
+                : Object.keys(fact).includes('blip') ? <span>{props.usStandard && fact.usFact ? fact.usFact : fact.fact}</span> : (props.usStandard && fact.usFact ? fact.usFact : fact.fact)}
             </Fact>
           )
         } else return <></>
       })}
-      <End distance={props.distance} />
+      <End distance={props.distance} usStandard={props.usStandard} usDistance={props.usDistance} />
     </FactListContainer>
   )
 }
