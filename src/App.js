@@ -58,7 +58,6 @@ export default function App() {
 
   const getIssEarthLocation = async (lon, lat) => {
     const apiKey = process.env.REACT_APP_OCG_API_KEY
-    // const apiKey = '777ea9e72f594073a460308bbbe9d2ca'
     const q = `${lat},${lon}`
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${q}`)
@@ -69,7 +68,7 @@ export default function App() {
   }
 
   const getUserLocation = async (address) => {
-    const apiKey = '777ea9e72f594073a460308bbbe9d2ca'
+    const apiKey = process.env.REACT_APP_OCG_API_KEY
     try {
       const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}`)
       const location = response.data.results[0]
